@@ -1,6 +1,6 @@
 import type { Abi } from 'viem';
 
-export const CONTRACT_ADDRESS = '0x0000000000000000000000000000000000000000';
+export const CONTRACT_ADDRESS = '0x318d77f72B1659cCCC3a0bAe89c2a9D53799b94C';
 
 export const CONTRACT_ABI = [
   {
