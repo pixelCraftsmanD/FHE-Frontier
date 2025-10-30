@@ -26,7 +26,7 @@ export function PlayerStatus({ onBackToSelection }: PlayerStatusProps) {
   const [feedback, setFeedback] = useState<string>('');
   const [decrypted, setDecrypted] = useState<DecryptedPlayer | null>(null);
 
-  const { data: isRegisteredData, refetch: refetchRegistered } = useReadContract({
+  const { data: isRegisteredData} = useReadContract({
     address: CONTRACT_ADDRESS,
     abi: CONTRACT_ABI,
     functionName: 'isRegistered',
@@ -38,7 +38,7 @@ export function PlayerStatus({ onBackToSelection }: PlayerStatusProps) {
 
   const isRegistered = Boolean(isRegisteredData);
 
-  const { data: ciphertextData, refetch: refetchCiphertexts } = useReadContract({
+  const { data: ciphertextData } = useReadContract({
     address: CONTRACT_ADDRESS,
     abi: CONTRACT_ABI,
     functionName: 'getPlayerCiphertexts',
