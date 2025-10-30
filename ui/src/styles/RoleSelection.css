@@ -1,0 +1,134 @@
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.role-header h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.65rem;
+  color: #0f172a;
+}
+
+.role-header p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  color: #1f2937;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(30, 64, 175, 0.12);
+  border-color: #c7d2fe;
+}
+
+.role-card.selected {
+  border-color: #2563eb;
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.25);
+  background: linear-gradient(145deg, #2563eb 0%, #312e81 100%);
+  color: white;
+}
+
+.role-card .role-id {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.role-card .role-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.role-card .role-tagline {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.role-error {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  margin: 0;
+}
+
+.role-feedback {
+  margin: 0;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.role-feedback.success {
+  color: #047857;
+}
+
+.role-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.role-submit {
+  padding: 0.85rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 18px 35px rgba(37, 99, 235, 0.28);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-submit:disabled {
+  background: #cbd5f5;
+  color: #1e3a8a;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.role-submit:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.role-hint {
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background-color: #eef2ff;
+  color: #3730a3;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .role-actions {
+    justify-content: center;
+  }
+
+  .role-submit {
+    width: 100%;
+  }
+}
